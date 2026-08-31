@@ -3,123 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FIRANGI - Kanpur</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<title>Firangi - Desi Swad Kanpuriya Andaaz</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#0F0F0F;color:#fff}
-.hero{height:85vh;position:relative;background:url('https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1000') center/cover;display:flex;align-items:end;padding:30px}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.95) 20%,rgba(0,0,0,0.3) 100%)}
-.hero-content{position:relative;z-index:2;max-width:500px;margin:0 auto;width:100%}
-.hero h1{font-family:'Playfair Display';font-size:56px;letter-spacing:1px;line-height:0.9}
-.hero h1 i{color:#FF4D00;font-style:normal}
-.hero p{margin-top:12px;color:#ccc;font-size:14px}
-.stats{display:flex;gap:12px;margin-top:18px}
-.stat{background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);padding:8px 14px;border-radius:30px;font-size:12px;border:1px solid rgba(255,255,255,0.1)}
-
-.container{max-width:500px;margin:0 auto;padding:20px;background:#0F0F0F}
-.section-title{font-family:'Playfair Display';font-size:28px;margin:25px 0 15px}
-
-.food-card{position:relative;height:220px;border-radius:22px;overflow:hidden;margin-bottom:18px;display:flex;align-items:end}
-.food-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.food-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.9),rgba(0,0,0,0.1))}
-.food-info{position:relative;z-index:2;padding:18px;width:100%;display:flex;justify-content:space-between;align-items:end}
-.food-name{font-weight:700;font-size:20px}
-.food-desc{font-size:11px;color:#bbb;margin-top:4px}
-.food-price{font-size:22px;font-weight:800;color:#FF4D00}
-.qty-row{display:flex;align-items:center;gap:10px;margin-top:10px}
-.qty-btn{width:34px;height:34px;border-radius:10px;border:1px solid rgba(255,255,255,0.3);background:rgba(0,0,0,0.5);color:white;font-size:18px;backdrop-filter:blur(10px)}
-.qty-num{font-weight:700;min-width:20px;text-align:center}
-
-.booking{background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800') center/cover;border-radius:22px;padding:22px;position:relative;overflow:hidden;margin-top:30px}
-.booking::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.75)}
-.booking *{position:relative;z-index:2}
-.booking input{width:100%;padding:14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:12px;color:white;margin-top:10px}
-.booking input::placeholder{color:#aaa}
-.btn-orange{background:#FF4D00;border:none;color:white;padding:16px;border-radius:14px;width:100%;font-weight:700;margin-top:14px;font-size:15px}
-
-.cart{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:92%;max-width:480px;background:white;color:black;border-radius:18px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+body{font-family:'Inter',sans-serif;background:#fffaf5;color:#222}
+h1,h2,h3{font-family:'Poppins',sans-serif}
+header{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.logo{font-weight:700;font-size:22px;color:#e65100}
+.logo span{color:#111}
+.btn{padding:10px 18px;border-radius:8px;font-weight:600;text-decoration:none;display:inline-block}
+.btn-orange{background:#e65100;color:#fff}
+.hero{padding:40px 20px;text-align:center;background:linear-gradient(180deg,#fff3e0,#fffaf5)}
+.hero h1{font-size:36px;line-height:1.2}
+.hero h1 span{color:#e65100}
+.hero p{margin:14px 0 22px;color:#666}
+.menu{padding:30px 20px;max-width:1000px;margin:auto}
+.menu h2{text-align:center;font-size:28px;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.card img{width:100%;height:140px;object-fit:cover}
+.card-body{padding:12px}
+.card-body h3{font-size:16px}
+.card-body p{font-size:13px;color:#777;margin:4px 0 8px}
+.price{font-weight:700;color:#e65100}
+.card-body button{width:100%;margin-top:8px;padding:8px;border:none;border-radius:8px;background:#111;color:#fff;font-weight:600}
+footer{background:#111;color:#fff;text-align:center;padding:30px 20px;margin-top:30px}
 </style>
 </head>
 <body>
+<header>
+<div class="logo">Firangi <span>Kanpur</span></div>
+<a class="btn btn-orange" href="https://wa.me/919999999999?text=Hi, I want to order from Firangi">Order on WhatsApp</a>
+</header>
 
-<div class="hero">
-<div class="hero-content">
-<h1>FI<i>RANGI</i></h1>
-<p>Frying live, serving hot. Kakadeo's most loved desi kitchen.</p>
-<div class="stats"><span class="stat">⭐ 4.8 (1.2k reviews)</span><span class="stat">🕒 25-30 min</span><span class="stat">💵 COD</span></div>
-</div>
-</div>
+<section class="hero">
+<h1>Desi Swad, <span>Kanpuriya Andaaz</span></h1>
+<p>Authentic North Indian, Tandoor & Chinese - Direct WhatsApp Ordering, No Commission</p>
+<a class="btn btn-orange" href="#menu">View Menu</a>
+</section>
 
-<div class="container">
-<div class="section-title">Sizzling Now 🔥</div>
+<section id="menu" class="menu">
+<h2>Our Bestsellers</h2>
+<div class="grid">
 
-<div class="food-card">
-<img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600">
-<div class="food-info">
-<div><div class="food-name">Kadhai Paneer</div><div class="food-desc">Live tadka, capsicum, smoky gravy</div>
-<div class="qty-row"><button class="qty-btn" onclick="chg('Kadhai Paneer',270,-1)">-</button><span class="qty-num" id="q-Kadhai Paneer">0</span><button class="qty-btn" onclick="chg('Kadhai Paneer',270,1)">+</button></div>
-</div>
-<div class="food-price">₹270</div>
-</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500" alt="Paneer Butter Masala">
+<div class="card-body"><h3>Paneer Butter Masala</h3><p>Creamy & rich</p><div class="price">₹250</div><button onclick="order('Paneer Butter Masala')">Order</button></div>
 </div>
 
-<div class="food-card">
-<img src="https://images.unsplash.com/photo-1626100860428-baa90ab36a18?w=600">
-<div class="food-info">
-<div><div class="food-name">Butter Naan</div><div class="food-desc">Tandoor se seedha, makhan maar ke</div>
-<div class="qty-row"><button class="qty-btn" onclick="chg('Butter Naan',40,-1)">-</button><span class="qty-num" id="q-Butter Naan">0</span><button class="qty-btn" onclick="chg('Butter Naan',40,1)">+</button></div>
-</div>
-<div class="food-price">₹40</div>
-</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=500" alt="Butter Naan">
+<div class="card-body"><h3>Butter Naan (2 pcs)</h3><p>Soft tandoori naan</p><div class="price">₹60</div><button onclick="order('Butter Naan')">Order</button></div>
 </div>
 
-<div class="food-card">
-<img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600">
-<div class="food-info">
-<div><div class="food-name">Water Bottle</div><div class="food-desc">Chilled 1L - Bisleri</div>
-<div class="qty-row"><button class="qty-btn" onclick="chg('Water Bottle',20,-1)">-</button><span class="qty-num" id="q-Water Bottle">0</span><button class="qty-btn" onclick="chg('Water Bottle',20,1)">+</button></div>
-</div>
-<div class="food-price">₹20</div>
-</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500" alt="Veg Biryani">
+<div class="card-body"><h3>Veg Dum Biryani</h3><p>Hyderabadi style</p><div class="price">₹220</div><button onclick="order('Veg Dum Biryani')">Order</button></div>
 </div>
 
-<div class="booking">
-<h2 style="font-family:'Playfair Display';font-size:24px">Book Your Table</h2>
-<p style="color:#aaa;font-size:12px;margin-top:4px">No waiting in Kanpur heat</p>
-<input id="bName" placeholder="Your Name">
-<input id="bPhone" placeholder="Phone">
-<input id="bTime" type="datetime-local">
-<input id="bPeople" placeholder="People - e.g. 2">
-<button class="btn-orange" onclick="book()">Book on WhatsApp</button>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=500" alt="Dal Makhani">
+<div class="card-body"><h3>Dal Makhani</h3><p>Slow cooked overnight</p><div class="price">₹180</div><button onclick="order('Dal Makhani')">Order</button></div>
 </div>
 
-<div style="height:100px"></div>
 </div>
+</section>
 
-<div class="cart" id="cart" style="display:none">
-<div><div style="font-size:11px;color:#777">TOTAL</div><div id="total" style="font-weight:800;font-size:18px">₹0</div></div>
-<button class="btn-orange" style="width:auto;padding:12px 20px;margin:0" onclick="order()">Order on WhatsApp</button>
-</div>
+<footer>
+<p>Firangi Restaurant, Kanpur | 11AM - 11PM</p>
+<p style="margin-top:8px;font-size:13px;color:#aaa">Made with ❤️ by krypto-sketch</p>
+</footer>
 
 <script>
-let cart={}
-function chg(name,price,d){
- let q=document.getElementById('q-'+name); let v=parseInt(q.innerText)+d; if(v<0) v=0; q.innerText=v;
- if(v==0) delete cart[name]; else cart[name]={qty:v,price:price};
- let total=0,c=0; for(let k in cart){total+=cart[k].qty*cart[k].price;c+=cart[k].qty}
- if(c>0){document.getElementById('cart').style.display='flex'; document.getElementById('total').innerText='₹'+total+' • '+c+' items'} else document.getElementById('cart').style.display='none'
-}
-function order(){
- let msg='Hi Firangi! Order:%0A'; let total=0;
- for(let k in cart){msg+=`%0A- ${k} x ${cart[k].qty} = ₹${cart[k].qty*cart[k].price}`; total+=cart[k].qty*cart[k].price}
- msg+=`%0A%0ATotal: ₹${total} (COD)%0AAddress:%0A`; window.open('https://wa.me/919999999999?text='+msg,'_blank')
-}
-function book(){
- let n=document.getElementById('bName').value, p=document.getElementById('bPhone').value, t=document.getElementById('bTime').value, pe=document.getElementById('bPeople').value;
- if(!n||!p){alert('Name & Phone needed');return}
- let msg=`Table Booking - Firangi%0AName: ${n}%0APhone: ${p}%0ATime: ${t}%0APeople: ${pe}`; window.open('https://wa.me/919999999999?text='+msg,'_blank')
+function order(item){
+window.open(`https://wa.me/8957924156?text=Hi, I want to order ${item} from Firangi Kanpur`, '_blank');
 }
 </script>
 </body>
-</html>
+                                                                                                    </html>
